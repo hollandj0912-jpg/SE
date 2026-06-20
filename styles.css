@@ -10,6 +10,7 @@
 :root {
   --gold:    #f5c400;
   --gold-dk: #c99d00;
+  --gold-bright: #fff176;
   --black:   #050505;
   --card:    #0d0d0d;
   --card2:   #111111;
@@ -93,15 +94,22 @@ img { display: block; max-width: 100%; }
   display: flex;
   align-items: center;
   gap: 32px;
-  padding-block: 14px;
+  padding-block: 8px;
 }
 
 /* Logo */
 .logo { display: flex; align-items: center; flex-shrink: 0; }
 .logo-img {
-  height: 72px;
+  height: 100px;
   width: auto;
-  filter: invert(1) brightness(2.5) drop-shadow(0 0 4px rgba(245,196,0,.3));
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(78%)
+    sepia(100%)
+    saturate(800%)
+    hue-rotate(5deg)
+    brightness(110%);
 }
 
 /* Mobile number - hidden on desktop */
@@ -274,8 +282,11 @@ img { display: block; max-width: 100%; }
   font-weight: 700;
   font-size: 14px;
   letter-spacing: .14em;
-  color: var(--gold);
   margin-bottom: 20px;
+  background: linear-gradient(90deg, #f5c400 0%, #fff176 50%, #f5c400 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Hero heading */
@@ -353,7 +364,10 @@ img { display: block; max-width: 100%; }
   margin-top: 2px;
 }
 .stat-stars {
-  color: var(--gold);
+  background: linear-gradient(90deg, #f5c400 0%, #fff176 50%, #f5c400 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-size: 15px;
   line-height: 1;
   margin-top: 3px;
@@ -379,9 +393,12 @@ img { display: block; max-width: 100%; }
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 800;
   font-size: 20px;
-  color: var(--text);
   line-height: 1.1;
   margin-bottom: 2px;
+  background: linear-gradient(90deg, #f5c400 0%, #fff176 50%, #f5c400 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .stat span {
   font-size: 12px;
@@ -427,9 +444,12 @@ img { display: block; max-width: 100%; }
   font-weight: 700;
   font-size: 12px;
   letter-spacing: .18em;
-  color: var(--gold);
   text-align: center;
   margin-bottom: 10px;
+  background: linear-gradient(90deg, #f5c400 0%, #fff176 50%, #f5c400 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .section-heading {
   font-family: 'Barlow Condensed', sans-serif;
@@ -495,6 +515,10 @@ img { display: block; max-width: 100%; }
   letter-spacing: .03em;
   margin-bottom: 8px;
   text-transform: uppercase;
+  background: linear-gradient(90deg, #f5c400 0%, #fff176 50%, #f5c400 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .why-body p {
   font-size: 14px;
@@ -560,8 +584,11 @@ img { display: block; max-width: 100%; }
   font-size: 12px;
   letter-spacing: .07em;
   text-transform: uppercase;
-  color: #ccc;
   line-height: 1.3;
+  background: linear-gradient(90deg, #f5c400 0%, #fff176 50%, #f5c400 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* ============================================================
@@ -763,6 +790,7 @@ img { display: block; max-width: 100%; }
     filter: none;
     opacity: .6;
   }
+  .logo-img { height: 52px; }
   .hero-h1 { font-size: 56px; }
   .hero-sub { font-size: 16px; max-width: 80%; }
 
