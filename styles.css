@@ -186,7 +186,7 @@ img { display: block; max-width: 100%; }
 .hero {
   position: relative;
   overflow: hidden;
-  padding-block: 80px 100px;
+  padding-block: 100px 120px;
   background:
     radial-gradient(ellipse 70% 60% at 80% 40%, rgba(60,44,0,.55) 0%, transparent 70%),
     var(--black);
@@ -233,21 +233,21 @@ img { display: block; max-width: 100%; }
 .hero-h1 {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 900;
-  font-size: clamp(52px, 6vw, 84px);
-  line-height: .92;
+  font-size: clamp(64px, 7.5vw, 110px);
+  line-height: .88;
   letter-spacing: -.01em;
   text-transform: uppercase;
-  margin-bottom: 22px;
+  margin-bottom: 28px;
 }
 .dot { color: var(--gold); }
 
 /* Hero sub */
 .hero-sub {
-  font-size: 18px;
+  font-size: 20px;
   color: #bbb;
-  max-width: 480px;
+  max-width: 520px;
   line-height: 1.55;
-  margin-bottom: 36px;
+  margin-bottom: 40px;
 }
 
 /* Hero buttons */
@@ -327,12 +327,14 @@ img { display: block; max-width: 100%; }
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  margin-right: -4%;
 }
 .hero-img {
-  max-height: 540px;
-  width: auto;
+  max-height: 620px;
+  width: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 0 60px rgba(245,196,0,.15));
+  object-position: bottom right;
+  filter: drop-shadow(0 0 80px rgba(245,196,0,.2));
 }
 
 /* Bottom divider triangle */
@@ -604,7 +606,7 @@ img { display: block; max-width: 100%; }
     margin-bottom: 8px;
   }
   .hero-img { max-height: 260px; }
-  .hero-h1 { font-size: 52px; }
+  .hero-h1 { font-size: 60px; }
   .hero-sub { font-size: 16px; }
   .hero-bg-text { display: none; }
 
@@ -653,7 +655,7 @@ img { display: block; max-width: 100%; }
 
 @media (max-width: 480px) {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .hero-h1 { font-size: 44px; }
+  .hero-h1 { font-size: 50px; }
   .hero-buttons { flex-direction: column; }
   .hero-buttons .btn { width: 100%; justify-content: center; }
 }
