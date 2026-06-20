@@ -101,7 +101,40 @@ img { display: block; max-width: 100%; }
 .logo-img {
   height: 72px;
   width: auto;
-  filter: invert(1) drop-shadow(0 0 4px rgba(245,196,0,.4));
+  filter: invert(1) brightness(2.5) drop-shadow(0 0 4px rgba(245,196,0,.3));
+}
+
+/* Mobile number - hidden on desktop */
+.mobile-number {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  color: var(--gold);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: .03em;
+  text-decoration: none;
+  margin-left: auto;
+  white-space: nowrap;
+}
+.mobile-number .icon { width: 14px; height: 14px; }
+
+/* FB + hamburger grouped on mobile */
+.mobile-actions {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.header-fb-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  color: var(--gold);
+  flex-shrink: 0;
 }
 
 /* Desktop nav */
@@ -255,6 +288,10 @@ img { display: block; max-width: 100%; }
   text-transform: uppercase;
   margin-bottom: 28px;
   text-shadow: 0 2px 40px rgba(0,0,0,.6);
+  background: linear-gradient(180deg, #e8e8e8 0%, #a0a0a0 60%, #c8c8c8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .hero-h1 .gold-line {
   display: block;
@@ -263,7 +300,12 @@ img { display: block; max-width: 100%; }
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.dot { color: var(--gold); -webkit-text-fill-color: var(--gold); }
+.dot {
+  background: linear-gradient(90deg, #f5c400 0%, #fff176 50%, #f5c400 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
 /* Hero sub */
 .hero-sub {
@@ -690,6 +732,8 @@ img { display: block; max-width: 100%; }
   .nav-cta { display: none; }
   .hamburger { display: flex; }
   .mobile-nav { display: flex; }
+  .mobile-number { display: flex; }
+  .mobile-actions { display: flex; }
   .header-fb-mobile { display: flex; }
 
   /* Hero — single column, image as background */
