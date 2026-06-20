@@ -212,7 +212,7 @@ img { display: block; max-width: 100%; }
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--text);
+  background: linear-gradient(90deg, #f5c400 0%, #fff176 50%, #f5c400 100%);
   border-radius: 2px;
   transition: transform .25s, opacity .25s;
 }
@@ -783,27 +783,33 @@ img { display: block; max-width: 100%; }
     position: relative;
     z-index: 2;
     /* Dark overlay so text is readable over background image */
-    background: linear-gradient(to right, rgba(5,5,5,.92) 55%, rgba(5,5,5,.4) 100%);
+    background: linear-gradient(to bottom, rgba(5,5,5,.75) 0%, rgba(5,5,5,.5) 100%);
   }
   /* Image fills entire hero as background on mobile */
   .hero-image {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     min-height: unset;
     z-index: 1;
+    overflow: hidden;
+    display: block;
   }
   .hero-img {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: right center;
-    opacity: .5;
+    object-fit: contain;
+    object-position: center center;
+    opacity: .55;
+    margin-left: 0;
+    mask-image: none;
+    -webkit-mask-image: none;
   }
   .logo-img { height: 52px; }
   .hero-h1 { font-size: 56px; }
