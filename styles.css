@@ -251,7 +251,6 @@ img { display: block; max-width: 100%; }
   display: flex;
   align-items: center;
   overflow: hidden;
-  contain: paint;
   background:
     radial-gradient(ellipse 55% 80% at 80% 50%, rgba(90,65,0,.7) 0%, transparent 65%),
     var(--black);
@@ -414,25 +413,24 @@ img { display: block; max-width: 100%; }
   line-height: 1.3;
 }
 
-/* Hero image — absolutely fills right half of section, no column box */
+/* Hero image — sits in grid column, section overflow:hidden clips it */
 .hero-image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 58%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   height: 100%;
-  z-index: 1;
-  pointer-events: none;
-  isolation: isolate;
-  contain: layout style;
+  min-height: 700px;
+  overflow: visible;
 }
 .hero-img {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: -5%;
+  left: -20%;
+  width: 120%;
+  height: 110%;
   object-fit: contain;
-  object-position: center right;
-  transform: translateZ(0);
-  will-change: auto;
+  object-position: center center;
 }
 
 /* Bottom divider triangle */
@@ -468,6 +466,10 @@ img { display: block; max-width: 100%; }
   text-align: center;
   letter-spacing: -.01em;
   margin-bottom: 48px;
+  background: linear-gradient(180deg, #e8e8e8 0%, #a0a0a0 60%, #c8c8c8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* ============================================================
@@ -648,6 +650,10 @@ img { display: block; max-width: 100%; }
   letter-spacing: -.01em;
   line-height: 1.1;
   margin-bottom: 4px;
+  background: linear-gradient(180deg, #e8e8e8 0%, #a0a0a0 60%, #c8c8c8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .cta-sub {
   font-size: 14px;
@@ -790,15 +796,18 @@ img { display: block; max-width: 100%; }
     right: 0;
     width: 100%;
     height: 100%;
+    min-height: unset;
     z-index: 1;
   }
   .hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: right center;
-    filter: none;
-    opacity: .6;
+    opacity: .5;
   }
   .logo-img { height: 52px; }
   .hero-h1 { font-size: 56px; }
