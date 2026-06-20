@@ -110,11 +110,12 @@ img { display: block; max-width: 100%; }
   filter:
     brightness(0)
     saturate(100%)
-    invert(85%)
-    sepia(90%)
-    saturate(700%)
-    hue-rotate(358deg)
-    brightness(103%);
+    invert(83%)
+    sepia(55%)
+    saturate(1200%)
+    hue-rotate(3deg)
+    brightness(98%)
+    contrast(102%);
 }
 
 /* Mobile number - hidden on desktop */
@@ -250,6 +251,7 @@ img { display: block; max-width: 100%; }
   display: flex;
   align-items: center;
   overflow: hidden;
+  contain: paint;
   background:
     radial-gradient(ellipse 55% 80% at 80% 50%, rgba(90,65,0,.7) 0%, transparent 65%),
     var(--black);
@@ -421,17 +423,16 @@ img { display: block; max-width: 100%; }
   height: 100%;
   z-index: 1;
   pointer-events: none;
-  will-change: transform;
-  transform: translateZ(0);
+  isolation: isolate;
+  contain: layout style;
 }
 .hero-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: center right;
-  filter: drop-shadow(-30px 0 50px rgba(245,196,0,.2));
   transform: translateZ(0);
-  backface-visibility: hidden;
+  will-change: auto;
 }
 
 /* Bottom divider triangle */
