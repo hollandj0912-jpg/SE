@@ -99,9 +99,9 @@ img { display: block; max-width: 100%; }
 /* Logo */
 .logo { display: flex; align-items: center; flex-shrink: 0; }
 .logo-img {
-  height: 60px;
+  height: 72px;
   width: auto;
-  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(245,196,0,.5));
+  filter: brightness(0) saturate(100%) invert(83%) sepia(60%) saturate(600%) hue-rotate(5deg) brightness(105%) drop-shadow(0 0 6px rgba(245,196,0,.3));
 }
 
 /* Desktop nav */
@@ -345,10 +345,10 @@ img { display: block; max-width: 100%; }
 .hero-img {
   position: absolute;
   top: 50%;
-  left: -10%;
+  left: -25%;
   transform: translateY(-50%);
-  width: 120%;
-  height: 110%;
+  width: 130%;
+  height: 115%;
   object-fit: contain;
   object-position: center left;
   filter: drop-shadow(0 0 60px rgba(245,196,0,.25));
@@ -611,13 +611,14 @@ img { display: block; max-width: 100%; }
   justify-content: center;
   width: 36px;
   height: 36px;
-  background: #1877f2;
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: 50%;
-  color: #fff;
-  transition: background .18s, transform .15s;
+  color: var(--gold);
+  transition: border-color .18s, background .18s, transform .15s;
   flex-shrink: 0;
 }
-.footer-fb:hover { background: #1460c4; transform: translateY(-2px); }
+.footer-fb:hover { background: rgba(245,196,0,.1); border-color: var(--gold); transform: translateY(-2px); }
 
 .footer-credit {
   font-size: 11px;
@@ -648,8 +649,9 @@ img { display: block; max-width: 100%; }
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #1877f2;
-  color: #fff;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--gold);
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -657,10 +659,10 @@ img { display: block; max-width: 100%; }
   padding: 12px 16px;
   border-radius: var(--radius);
   text-decoration: none;
-  transition: background .18s;
+  transition: background .18s, border-color .18s;
   white-space: nowrap;
 }
-.mobile-fb-link:hover { background: #1460c4; }
+.mobile-fb-link:hover { background: rgba(245,196,0,.1); border-color: var(--gold); }
 
 /* ============================================================
    RESPONSIVE
