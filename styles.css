@@ -101,7 +101,7 @@ img { display: block; max-width: 100%; }
 .logo-img {
   height: 72px;
   width: auto;
-  filter: brightness(0) saturate(100%) invert(83%) sepia(60%) saturate(600%) hue-rotate(5deg) brightness(105%) drop-shadow(0 0 6px rgba(245,196,0,.3));
+  filter: invert(1) drop-shadow(0 0 4px rgba(245,196,0,.4));
 }
 
 /* Desktop nav */
@@ -189,7 +189,7 @@ img { display: block; max-width: 100%; }
    ============================================================ */
 .hero {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   min-height: 700px;
   display: flex;
   align-items: center;
